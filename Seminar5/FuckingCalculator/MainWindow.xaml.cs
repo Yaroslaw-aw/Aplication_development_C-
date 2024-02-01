@@ -33,16 +33,16 @@ namespace FuckingCalculator
                 if ('0' <= ch && ch <= '9')
                     result.Append(ch);
 
+                if (comma > 0 && ch == ',' || ch == '.')
+                {
+                    MessageBox.Show("ЭЭЭ, АЛЁ блять! На клавиатуру смотри !\n\nКуда ты точки там свои ставишь?!");
+                }
+
                 if (comma == 0 && ch == ',' || ch == '.' )
                 {                    
                     result.Append(',');
                     comma++;
-                }
-
-                if (comma > 0 && ch == ',' || ch == '.' )
-                {
-                    MessageBox.Show("ЭЭЭ, АЛЁ блять! На клавиатуру смотри !\n\nКуда ты точки там свои ставишь?!");
-                }
+                }                
             }
 
             string? name = (e.Source as FrameworkElement)?.Name;
