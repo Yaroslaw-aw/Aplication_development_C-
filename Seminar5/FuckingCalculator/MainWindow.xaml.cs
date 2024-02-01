@@ -27,15 +27,27 @@ namespace FuckingCalculator
 
             StringBuilder result = new StringBuilder();
 
+            int comma = 0;
             foreach (Char ch in input)
             {
                 if ('0' <= ch && ch <= '9')
                     result.Append(ch);
+
+                if (comma == 0 && ch == ',' || ch == '.' )
+                {                    
+                    result.Append(',');
+                    comma++;
+                }
+
+                if (comma > 0 && ch == ',' || ch == '.' )
+                {
+                    MessageBox.Show("ЭЭЭ, АЛЁ блять! На клавиатуру смотри !\n\nКуда ты точки там свои ставишь?!");
+                }
             }
 
             string? name = (e.Source as FrameworkElement)?.Name;
-
-            if (!int.TryParse(result.ToString(), out int value) && name != "Cancel")
+             
+            if (!decimal.TryParse(result.ToString(), out decimal value) && name != "Cancel" && name != "Back")
             {
                 MessageBox.Show("Ты че, пьяный?");
                 return;
@@ -58,6 +70,10 @@ namespace FuckingCalculator
                 case "Div":
                     calculator.Div(value);
                     InputText.Text = string.Empty;
+                    break;
+                case "Back":
+                    InputText.Text = string.Empty;
+                    calculator.Back();
                     break;
                 case "Cancel":
                     InputText.Text = string.Empty;

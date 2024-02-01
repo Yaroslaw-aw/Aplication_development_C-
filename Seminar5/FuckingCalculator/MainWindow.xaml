@@ -8,24 +8,33 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <!--<ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>-->
         </Grid.ColumnDefinitions>
-        <Button Name="Add" FontSize="25" Click="Button_Click" Content="Плюс" HorizontalAlignment="Left" Margin="73,182,0,0" VerticalAlignment="Top" Height="50" Width="120"/>
-        <Button Name="Sub" FontSize="25" Click="Button_Click" Content="Минус" HorizontalAlignment="Left" Margin="253,182,0,0" VerticalAlignment="Top" Height="50" Width="120"/>
-        <Button Name="Mult" FontSize="25" Click="Button_Click" Content="Умножить" HorizontalAlignment="Left" Margin="433,182,0,0" VerticalAlignment="Top" Height="50" Width="120"/>
-        <Button Name="Div" FontSize="25" Click="Button_Click" Content="Разделить" HorizontalAlignment="Left" Margin="613,182,0,0" VerticalAlignment="Top" Height="50" Width="120"/>
+        <Grid.RowDefinitions>
+            <!--<RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>-->
+            <!--Grid.Column="0" Grid.Row="1" -->
+        </Grid.RowDefinitions>
+        <Button Name="Cancel" FontSize="25" Click="Button_Click" Content="Сброс" HorizontalAlignment="Left" Margin="329,124,0,0" VerticalAlignment="Top" Height="44" Width="131"/>
+        <Button  Name="Add" FontSize="25" Click="Button_Click" Content="Плюс" HorizontalAlignment="Left" Margin="73,182,0,0" VerticalAlignment="Top" Height="50" Width="120"/>
+        <Button  Name="Sub" FontSize="25" Click="Button_Click" Content="Минус" HorizontalAlignment="Left" Margin="253,182,0,0" VerticalAlignment="Top" Height="50" Width="120"/>
+        <Button  Name="Mult" FontSize="25" Click="Button_Click" Content="Умножить" HorizontalAlignment="Left" Margin="433,182,0,0" VerticalAlignment="Top" Height="50" Width="120"/>
+        <Button  Name="Div" FontSize="25" Click="Button_Click" Content="Разделить" HorizontalAlignment="Left" Margin="613,182,0,0" VerticalAlignment="Top" Height="50" Width="120"/>
         <TextBox Name="InputText" FontSize="30" Text="" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="95,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="260" Height="64"/>
-        <Label Name="Answer" FontSize="30" BorderThickness="1" BorderBrush="Black" Content="Label" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="455,41,0,0" VerticalAlignment="Top" Height="64" Width="260"/>
-        <Button Name="Cancel" Content="ГАЛЯ У НАС ОТМЕНА" Click="Button_Click" FontSize="30" HorizontalAlignment="Left" Margin="57,260,0,0" VerticalAlignment="Top" Height="147" Width="682" RenderTransformOrigin="0.5,0.5">
+        <Label Name="Answer" FontSize="30" BorderThickness="1" BorderBrush="Black" Content="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="455,41,0,0" VerticalAlignment="Top" Height="64" Width="260"/>
+        <Button  Name="Back" Content="ГАЛЯ У НАС ОТМЕНА" Click="Button_Click" FontSize="30" HorizontalAlignment="Left" Margin="57,260,0,0" VerticalAlignment="Top" Height="147" Width="682" RenderTransformOrigin="0.5,0.5">            
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-0.292"/>
+                    <RotateTransform Angle="-3.075"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        
 
     </Grid>
 </Window>
